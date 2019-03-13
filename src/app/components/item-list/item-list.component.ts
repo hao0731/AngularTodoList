@@ -17,6 +17,18 @@ export class ItemListComponent implements OnInit {
   constructor(private operation: ItemListInterface, private Filter: ItemFilterInterface,private router: Router) { 
   }
 
+  public numericUpSortFilter(): void {
+    this.items = this.Filter.numericUpSortFilter(this.items)
+  }
+
+  public numericDownSortFilter(): void {
+    this.items = this.Filter.numericDownSortFilter(this.items)
+  }
+
+  public removeCompletedItems(): void {
+    this.operation.removeCompletedItems()
+  }
+
   ngOnInit() {
     this.itemSubject = this.operation.getItems()
     this.itemSubject.subscribe(item => { 

@@ -5,9 +5,9 @@
     <a [routerLink]="['/completed']">已完成</a>
   </div>
   <div class="filter-operation">
-    <span class="icon"><fa-icon class="mx-2" [icon]="['fas', 'sort-alpha-down']"></fa-icon></span>
-    <span class="icon"><fa-icon class="mx-2" [icon]="['fas', 'sort-alpha-up']"></fa-icon></span>
-    <span class="icon"><fa-icon class="mx-2" [icon]="['fas', 'trash']"></fa-icon></span>
+    <span class="icon" (click)="numericDownSortFilter()"><fa-icon class="mx-2" [icon]="['fas', 'sort-numeric-down']"></fa-icon></span>
+    <span class="icon" (click)="numericUpSortFilter()"><fa-icon class="mx-2" [icon]="['fas', 'sort-numeric-up']"></fa-icon></span>
+    <span class="icon" (click)="removeCompletedItems()"><fa-icon class="mx-2" [icon]="['fas', 'trash']"></fa-icon></span>
   </div>
 </nav>
 <app-item *ngFor="let item of items" [item]="item"></app-item>

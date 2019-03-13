@@ -3,8 +3,10 @@
     border: none;
     border-radius: 0;
     width: 60%;
-    padding: 0.5rem;
+    padding: 0.7rem;
     color: #6c757d;
+    font-size: 1.3rem;
+    vertical-align: bottom;
 }
 
 .btn-addItem {
@@ -13,7 +15,17 @@
     border: none;
     font-size: 1rem;
     line-height: 1.5;
-    padding: 0.2rem 0.3rem;
-    vertical-align: middle;
+    padding: 0.7rem 0.7rem;
+    vertical-align: bottom;
     cursor: pointer;
+}
+
+.btn-addItem:disabled {
+    color: #bdbdbd;
+}
+
+@media (max-width: 767.98px) {
+    .input-section {
+        width: 70%;
+    }
 }

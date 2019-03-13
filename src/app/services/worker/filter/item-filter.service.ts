@@ -23,4 +23,16 @@ export class ItemFilterService {
     }
     return result
   }
+
+  public numericUpSortFilter(items: Array<Item>): Array<Item> {
+    if(!items.length) return []
+    items.sort((a, b) => { return b.id - a.id })
+    return items
+  }
+
+  public numericDownSortFilter(items: Array<Item>): Array<Item> {
+    if(!items.length) return []
+    items.sort((a, b) => { return a.id - b.id })
+    return items
+  }
 }

@@ -3,8 +3,8 @@
   <div *ngIf="!editing; else formSection" class="item-text">{{ item.text }}</div>
   <ng-template #formSection>
     <form class="item-fixForm" [formGroup]="fixItemForm" (ngSubmit)="fixItem(item.id, fixItemForm.value.text)" #fixForm="ngForm" >
-      <input type="text" [formControl]="fixItemForm.controls['text']" />
-      <button type="submit" [disabled]="fixForm.form.invalid">修改</button>
+      <input type="text" class="item-fixForm-input" [formControl]="fixItemForm.controls['text']" />
+      <button type="submit" class="item-fixForm-btn" [disabled]="fixForm.form.invalid"><fa-icon class="mx-2" [icon]="['fas', 'check']"></fa-icon></button>
     </form>
   </ng-template>
   <div class="item-operation">

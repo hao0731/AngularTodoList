@@ -51,6 +51,12 @@ export class ItemStorageService implements ItemFormInterface, ItemListInterface,
     this.itemsStore.next(result)
   }
 
+  public removeCompletedItems(): void {
+    const items = this.itemsStore.getValue()
+    const result = items.filter(item => { return item.completed === false }) 
+    this.itemsStore.next(result) 
+  }
+
   public getItems(): Observable<Array<Item>> {
     return this.items
   }
