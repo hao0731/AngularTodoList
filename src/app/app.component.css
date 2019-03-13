@@ -1,0 +1,7 @@
+.list-block {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #eee;
+    color: #6c757d;
+    width: calc(60% + 3.6rem);
+    margin: 0 auto;
+}

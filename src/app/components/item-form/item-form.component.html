@@ -1,0 +1,4 @@
+<form [formGroup]="itemForm" (ngSubmit)="addItem(itemForm.value)" #itemform="ngForm">
+  <input type="text" class="input-section" [formControl]="itemForm.controls['text']" />
+  <button type="submit" class="btn-addItem" [disabled]="itemform.form.invalid">新增</button>
+</form>

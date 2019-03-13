@@ -1,0 +1,17 @@
+.filter-nav {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    border-bottom: #9ca5ad 1px solid;
+}
+
+.filter-nav a {
+    color: #6c757d;
+    text-decoration: none;
+    padding: 0.2rem 0.3rem;
+}
+
+.filter-nav a:hover {
+    color: #252a2e;
+}

@@ -1,0 +1,6 @@
+<nav class="filter-nav">
+  <a [routerLink]="['/']">全部</a>
+  <a [routerLink]="['/undone']">未完成</a>
+  <a [routerLink]="['/completed']">已完成</a>
+</nav>
+<app-item *ngFor="let item of items" [item]="item"></app-item>

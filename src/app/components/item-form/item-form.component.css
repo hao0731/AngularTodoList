@@ -1,0 +1,19 @@
+.input-section {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 60%;
+    padding: 0.5rem;
+    color: #6c757d;
+}
+
+.btn-addItem {
+    background-color: #6c757d;
+    color: #e7e7e7;
+    border: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.2rem 0.3rem;
+    vertical-align: middle;
+    cursor: pointer;
+}

@@ -1,0 +1,8 @@
+<div class="item">
+  <input type="checkbox" class="item-checkbox" (click)="completedItem(item.id)" [checked]="item.completed" />
+  <p class="item-text">{{ item.text }}</p>
+  <p class="item-operation">
+    <span class="icon"><fa-icon class="mx-2" [icon]="['fas', 'edit']"></fa-icon></span>
+    <span class="icon"><fa-icon class="mx-2" [icon]="['fas', 'trash-alt']"></fa-icon></span>
+  </p>
+</div>
