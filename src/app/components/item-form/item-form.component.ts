@@ -18,6 +18,7 @@ export class ItemFormComponent implements OnInit {
 
   public addItem(data: any): void {
     this.operation.addItem(data['text'])
+    this.itemForm.controls.text.setValue('')
   }
 
   ngOnInit() {

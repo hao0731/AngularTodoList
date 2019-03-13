@@ -19,6 +19,7 @@
 
 .item-operation > .icon {
     padding: 0.5rem 0.5rem;
+    cursor: pointer;
 }
 
 .item-checkbox {
