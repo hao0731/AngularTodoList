@@ -1,6 +1,13 @@
 <nav class="filter-nav">
-  <a [routerLink]="['/']">全部</a>
-  <a [routerLink]="['/undone']">未完成</a>
-  <a [routerLink]="['/completed']">已完成</a>
+  <div class="filter-link">
+    <a [routerLink]="['/']">全部</a>
+    <a [routerLink]="['/undone']">未完成</a>
+    <a [routerLink]="['/completed']">已完成</a>
+  </div>
+  <div class="filter-operation">
+    <span class="icon"><fa-icon class="mx-2" [icon]="['fas', 'sort-alpha-down']"></fa-icon></span>
+    <span class="icon"><fa-icon class="mx-2" [icon]="['fas', 'sort-alpha-up']"></fa-icon></span>
+    <span class="icon"><fa-icon class="mx-2" [icon]="['fas', 'trash']"></fa-icon></span>
+  </div>
 </nav>
 <app-item *ngFor="let item of items" [item]="item"></app-item>

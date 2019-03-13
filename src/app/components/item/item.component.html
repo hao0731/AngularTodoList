@@ -1,14 +1,14 @@
 <div class="item">
   <input type="checkbox" class="item-checkbox" (click)="completedItem(item.id)" [checked]="item.completed" />
-  <p *ngIf="!editing; else formSection" class="item-text">{{ item.text }}</p>
+  <div *ngIf="!editing; else formSection" class="item-text">{{ item.text }}</div>
   <ng-template #formSection>
-    <form class="item-text" [formGroup]="fixItemForm" (ngSubmit)="fixItem(item.id, fixItemForm.value.text)" #fixForm="ngForm" >
+    <form class="item-fixForm" [formGroup]="fixItemForm" (ngSubmit)="fixItem(item.id, fixItemForm.value.text)" #fixForm="ngForm" >
       <input type="text" [formControl]="fixItemForm.controls['text']" />
       <button type="submit" [disabled]="fixForm.form.invalid">修改</button>
     </form>
   </ng-template>
-  <p class="item-operation">
+  <div class="item-operation">
     <span class="icon"(click)="editItem()"><fa-icon class="mx-2" [icon]="['fas', 'edit']"></fa-icon></span>
     <span class="icon" (click)="removeItem(item.id)"><fa-icon class="mx-2" [icon]="['fas', 'trash-alt']"></fa-icon></span>
-  </p>
+  </div>
 </div>

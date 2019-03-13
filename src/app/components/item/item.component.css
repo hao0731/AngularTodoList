@@ -2,12 +2,10 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    margin-left: 0.8rem;
-    margin-right: 0.8rem;
-    margin-bottom: 1rem;
+    padding: 1.5rem 0.8rem 1.5rem 0.8rem;
 }
 
-.item-text {
+.item-text, .item-fixForm {
     flex: 2;
     text-align: left;
 }
@@ -24,4 +22,39 @@
 
 .item-checkbox {
     margin-right: 1rem;
+}
+
+@media (max-width: 575.98px) { 
+    .item-text {
+        width: 50%;
+        word-wrap:break-word;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .item-text {
+        width: 73%;
+        word-wrap:break-word;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .item-text {
+        width: 78%;
+        word-wrap:break-word;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .item-text {
+        width: 82%;
+        word-wrap:break-word;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .item-text {
+        width: 85%;
+        word-wrap:break-word;
+    }
 }
